@@ -8,10 +8,10 @@ public class Ventana extends Pieza{
     this._color = _color;
   }
   
-  /*public void dibujar(){
+  public void dibujar(){
     rectMode(CENTER);
     fill(_color);
     rect(x, y, lado, lado);
-  }*/
+  }
  
 }

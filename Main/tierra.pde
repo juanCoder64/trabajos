@@ -1,10 +1,9 @@
-abstract class Pieza{
+abstract class Tierra{
   protected float x;
   protected float y;
   
-  Pieza(float x, float y) { 
-    this.x = x;
-    this.y = y;
+  Tierra () { 
+   
   }
   
   public abstract void dibujar();
