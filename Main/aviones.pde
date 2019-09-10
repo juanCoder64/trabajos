@@ -1,29 +1,21 @@
-abstract class Vehiculos{
+abstract class Aviones{
   protected float or;
   protected float v =1;
-  protected int s;
-  Carcasa carcasa;
-   Llanta llantaIzq;
-   Llanta llantaDer;
+  Caracasa caracasa;
  Ventana[] ventana;
-  Vehiculos (float v, int s) { 
+  Aviones(float v) { 
  this.v=v;
- this.s =s;
   }
   
   public abstract void dibujar();
   public void moverY(){
-    carcasa.moverY(v);
-    llantaIzq.moverY(v);
-    llantaDer.moverY(v);
-    for(int i=0; i<s; i++)
+    caracasa.moverY(v);
+    for(int i=0; i<3; i++)
       ventana[i].moverY(v);
   }
     private void moverX(){
-    carcasa.moverX(v);
-    llantaIzq.moverX(v);
-    llantaDer.moverX(v);
-    for(int i=0; i<s; i++)
+    caracasa.moverX(v);
+    for(int i=0; i<3; i++)
       ventana[i].moverX(v);
   }
   public void avanzar(){

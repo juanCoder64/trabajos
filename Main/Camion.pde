@@ -1,4 +1,4 @@
-class Camion{
+class Camion extends Vehiculos{
   
   private float h;
   private float w;
@@ -6,12 +6,9 @@ class Camion{
   private float v;
   private int or=1;
   
-  private Carcasa carcasa;
-  private Llanta llantaIzq;
-  private Llanta llantaDer;
-  private Ventana[] ventana;
   
-  public Camion(float x, float y, float w, float h, int _color, float v){
+  public Camion(float x, float y, float w, float h, int _color, float v,int s){
+    super(v,s);
     this.x = x;
     this.y = y;
     this.h = h;
@@ -36,44 +33,5 @@ class Camion{
     llantaDer.dibujar();
     for(int i=0; i<3; i++)
       ventana[i].dibujar();
-  }
-  private void moverY(){
-    carcasa.moverY(v);
-    llantaIzq.moverY(v);
-    llantaDer.moverY(v);
-    for(int i=0; i<3; i++)
-      ventana[i].moverY(v);
-  }
-  private void moverX(){
-    carcasa.moverX(v);
-    llantaIzq.moverX(v);
-    llantaDer.moverX(v);
-    for(int i=0; i<3; i++)
-      ventana[i].moverX(v);
-  }
-  public void avanzar(){
-    if(or == 1){//derecha
-      if(v<0)
-         v = -v;
-       moverX();
-    }
-    if(or == 2){//arriba
-      if(v>0)
-         v = -v;
-       moverY();
-    }
-    if(or == 3){//izquierda
-      if(v>0)
-         v = -v;
-       moverX();
-    }
-    if(or == 4){//abajo
-      if(v<0)
-         v = -v;
-       moverY();
-    }
-  }
-  public void rotar(int or){
-    this.or = or;
   }
 }
