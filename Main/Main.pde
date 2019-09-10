@@ -12,24 +12,24 @@ void setup() {
 
 void draw() {
   background(255);
-  c.dibujar();
+  mo.dibujar();
   delay(1);
 }
 void keyPressed() {
   if (keyCode == 39) {//derecha
-    c.rotar(1);
-    c.avanzar();
+    mo.rotar(1);
+    mo.avanzar();
   }
   if (keyCode == 38) {//arriba
-    c.rotar(2);
-    c.avanzar();
+    mo.rotar(2);
+    mo.avanzar();
   }
   if (keyCode == 37) {//izquierda
-    c.rotar(3);
-    c.avanzar();
+    mo.rotar(3);
+    mo.avanzar();
   }
   if (keyCode == 40) {//abajo
-    c.rotar(4);
-    c.avanzar();
+    mo.rotar(4);
+    mo.avanzar();
   }
 }
